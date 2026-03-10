@@ -134,8 +134,9 @@ your-repo/
 │   ├── cached_scores_ddpm_t400_multi_topk_updated.npz
 │   └── cached_scores_ddim_t400_s100_eta0_multi_topk_updated.npz
 └── README.md
----
 ```
+---
+
 ## Notebook Structure
 
 | Cell | Section | Description |
