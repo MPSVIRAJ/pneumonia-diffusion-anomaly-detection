@@ -1,7 +1,7 @@
 # Pneumonia Detection Using Diffusion Models (DDPM & DDIM)
 ### Unsupervised Anomaly Detection on Chest X-Rays
 
-> Numerical Methods Course Project — March 2026
+> Sameera Viraj | March 2026
 
 ---
 
@@ -135,7 +135,7 @@ your-repo/
 │   └── cached_scores_ddim_t400_s100_eta0_multi_topk_updated.npz
 └── README.md
 ---
-
+```
 ## Notebook Structure
 
 | Cell | Section | Description |
@@ -153,6 +153,48 @@ your-repo/
 | 20–21 | DDIM Sampling | Fast deterministic generation |
 | 22–23 | DDIM Reconstruction | Heal-and-compare pipeline |
 | 24–25 | DDIM Evaluation | Full evaluation mirroring DDPM |
+
+---
+
+## Environment Setup
+
+### Step 1 — Clone the repository
+```bash
+git clone https://github.com/MPSVIRAJ/pneumonia-diffusion-anomaly-detection.git
+```
+
+### Step 2 — Create a virtual environment
+
+**Mac / Linux:**
+```bash
+python3 -m venv MedAno
+source MedAno/bin/activate
+```
+
+**Windows:**
+```bash
+python -m venv MedAno
+MedAno\Scripts\activate
+```
+
+### Step 3 — Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4 — Launch the notebook
+```bash
+jupyter notebook
+```
+
+Then open `pneumonia_anomaly_detection_diffusion_models_ddpm_ddim.ipynb`.
+
+---
+
+> **Note:** To deactivate the virtual environment when you're done:
+> ```bash
+> deactivate
+> ```
 
 ---
 
