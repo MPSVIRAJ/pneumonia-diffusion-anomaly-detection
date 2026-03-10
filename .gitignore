@@ -1,10 +1,7 @@
 # Virtual environment
 MedAno/
 Reports/
-
-# Large files
-*.pth
-*.npz
+old_saved_models_cache/
 
 # Mac OS files
 .DS_Store
