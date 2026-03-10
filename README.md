@@ -126,13 +126,14 @@ Two strategies are compared on the reconstruction residual:
 ## Project Structure
 
 ```
-├── pneumonia_diffusion_anomaly_detection_ddpm_ddim_V2_1.ipynb   # Main notebook
-├── ddpm_pneumonia_model_128x128.pth                              # Saved model weights (after training)
-├── cached_scores_ddpm_t400_multi_topk_updated.npz               # Cached DDPM anomaly scores
-├── cached_scores_ddim_t400_s100_eta0_multi_topk_updated.npz     # Cached DDIM anomaly scores
+your-repo/
+├── pneumonia_diffusion_anomaly_detection_ddpm_ddim_V2_1.ipynb  ← notebook here
+├── weights/
+│   └── ddpm_pneumonia_model_128x128.pth
+├── cache/
+│   ├── cached_scores_ddpm_t400_multi_topk_updated.npz
+│   └── cached_scores_ddim_t400_s100_eta0_multi_topk_updated.npz
 └── README.md
-```
-
 ---
 
 ## Notebook Structure
@@ -181,10 +182,12 @@ pip install torch torchvision medmnist numpy matplotlib seaborn scikit-learn tqd
 1. Run all cells top to bottom
 2. Training takes ~30–60 minutes on CPU at `128×128`
 
-**To skip training (use saved weights):**
+**Pre-trained weights and cached scores are included in the repo.**
+To reproduce the exact reported results without training:
 1. Run cells 2–7 (imports, data, model definition)
 2. Run cell 10–11 (load pre-trained weights)
-3. Continue from cell 12 onwards
+3. Skip directly to cell 18–19 for DDPM evaluation
+4. Skip directly to cell 24–25 for DDIM evaluation
 
 **Hardware:** Auto-detects Apple Silicon (MPS), CUDA GPU, or falls back to CPU.
 
